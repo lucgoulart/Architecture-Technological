@@ -1,0 +1,40 @@
+.header-static-grey{
+  height: 80px;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.header-options{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: 15rem;
+  margin-top: 20px;
+
+  &__logo{
+    width: 160px;
+  }
+
+
+  &__block-options{
+
+
+    span{
+      font-size: 26px;
+
+      a{
+        text-decoration: none;
+        color: #888484;
+      }
+    }
+
+    .barra{
+      height: 85px;
+      width: 1px;
+      background-color: #888484;
+  }
+    }
+  }
+
+
+
