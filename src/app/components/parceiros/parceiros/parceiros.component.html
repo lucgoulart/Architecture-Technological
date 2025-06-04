@@ -1,0 +1,25 @@
+<section class="parceiros-intro">
+  <h1>Nossos Parceiros</h1>
+  <p>
+    A <strong>Technology Architecture</strong> valoriza as parcerias que fortalecem nossos serviços e ampliam as soluções para nossos clientes.
+    Trabalhamos com empresas líderes em tecnologia, design e marketing digital para entregar resultados excepcionais.
+  </p>
+</section>
+
+
+
+
+<section class="parceiros-intro">
+  <h1>Nossos Parceiros</h1>
+  <p>
+    A <strong>Technology Architecture</strong> valoriza as parcerias que fortalecem nossos serviços e ampliam as soluções para nossos clientes.
+    Trabalhamos com empresas líderes em tecnologia, design e marketing digital para entregar resultados excepcionais.
+  </p>
+</section>
+
+<section class="parceiros-grid">
+  <div class="parceiro-card" *ngFor="let parceiro of parceiros">
+    <img [src]="parceiro.logo" [alt]="parceiro.nome" />
+    <p>{{ parceiro.nome }}</p>
+  </div>
+</section>

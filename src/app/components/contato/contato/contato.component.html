@@ -1,0 +1,38 @@
+<section class="contato">
+  <div class="contato__intro">
+    <h2>📬 Entre em Contato</h2>
+    <p>Estamos prontos para ouvir você! Preencha o formulário abaixo ou use nossos canais diretos. Vamos tirar seu projeto do papel.</p>
+  </div>
+
+  <div class="contato__container">
+    <div class="contato__formulario">
+      <form [formGroup]="contatoForm" (ngSubmit)="enviarMensagem()">
+        <label>Nome</label>
+        <input type="text" formControlName="nome" placeholder="Seu nome completo" required />
+
+        <label>E-mail</label>
+        <input type="email" formControlName="email" placeholder="exemplo@email.com" required />
+
+        <label>Telefone</label>
+        <input type="text" formControlName="telefone" placeholder="(00) 00000-0000" />
+
+        <label>Mensagem</label>
+        <textarea formControlName="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
+
+        <button type="submit" [disabled]="contatoForm.invalid">Enviar Mensagem</button>
+      </form>
+    </div>
+
+    <div class="contato__info">
+      <h3>📞 Informações de Contato</h3>
+      <p><strong>Telefone:</strong> (11) 99381-8546</p>
+      <p><strong>E-mail:</strong> architecture_technological@outlook.com</p>
+      <p><strong>Horário:</strong> Seg a Sáb - 09h às 18h</p>
+
+      <h4>🌐 Redes Sociais</h4>
+      <a href="https://www.instagram.com/architecture_technological/" target="_blank">
+        <img src="assets/icon-insta.svg" alt="Instagram" /> architecture_technological
+      </a>
+    </div>
+  </div>
+</section>

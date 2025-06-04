@@ -1,0 +1,94 @@
+
+.header-opcoes{
+  position: absolute;
+  top: 10rem;
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+
+
+  &__tamanho{
+    background-color: #112d8b;
+    max-width: 61rem;
+    height: 42px;
+    display: flex;
+    align-items: center;
+  }
+
+  span{
+    padding: 30px;
+
+
+    a{
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+
+img{
+  width: 100%;
+}
+
+
+
+.servicos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+
+  .servico-box {
+    background-color: #f4f6fa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #001e74;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 16px;
+
+      strong {
+        color: #001e74;
+      }
+
+      em {
+        display: block;
+        margin-top: 20px;
+        font-style: italic;
+        color: #555;
+      }
+    }
+
+    &.destaque {
+      background-color: #e8f0ff;
+    }
+  }
+
+  .servico-lista {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+
+    li {
+      margin-bottom: 18px;
+      font-size: 15.5px;
+      line-height: 1.6;
+    }
+  }
+}
