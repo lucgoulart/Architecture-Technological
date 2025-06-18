@@ -10,7 +10,7 @@ import { ContatoComponent } from './components/contato/contato/contato.component
 const routes: Routes = [
   { path: '', component: PaginaInicialComponent },
   { path: 'quem-somos', component: QuemSomosComponent },
-  { path: 'noticias', component: ProjetosComponent},
+  { path: 'projetos', component: ProjetosComponent},
   { path: 'produtos', component: ProdutosComponent},
   { path: 'parceiros', component: ParceirosComponent},
   { path: 'contato', component: ContatoComponent},

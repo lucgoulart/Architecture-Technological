@@ -12,6 +12,7 @@ import { ProdutosComponent } from './components/produtos/produtos/produtos.compo
 import { ParceirosComponent } from './components/parceiros/parceiros/parceiros.component';
 import { ContatoComponent } from './components/contato/contato/contato.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

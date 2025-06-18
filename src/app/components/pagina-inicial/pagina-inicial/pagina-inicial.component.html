@@ -121,3 +121,30 @@
   </div>
 </div>
 
+
+
+
+
+<section class="timeline-container">
+  <h2>Como funciona a contratação do nosso serviço</h2>
+
+  <div class="timeline">
+    <div
+      class="timeline-item"
+      *ngFor="let passo of passos; let i = index"
+      #passoElement
+      [@fadeSlideIn]="visiblePassos[i] ? 'in' : 'out'"
+      [class.visible]="visiblePassos[i]"
+    >
+      <div class="timeline-icon">
+        <mat-icon>{{ passo.icone }}</mat-icon>
+      </div>
+      <div class="timeline-content">
+        <h3>{{ passo.titulo }}</h3>
+        <p>{{ passo.descricao }}</p>
+      </div>
+      <div class="timeline-circle"></div>
+    </div>
+  </div>
+</section>
+
