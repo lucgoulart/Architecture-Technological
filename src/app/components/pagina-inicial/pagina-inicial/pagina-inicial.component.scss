@@ -1,94 +1,406 @@
-
-.header-opcoes{
-  position: absolute;
-  top: 10rem;
+.video-container {
+  position: relative;
   width: 100%;
-  gap: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
+  height: 90vh;
+  overflow: hidden;
 
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
 
-  &__tamanho{
-    background-color: #112d8b;
-    max-width: 61rem;
-    height: 42px;
+  .overlay-content {
+    position: relative;
+    z-index: 2; // acima do vídeo e do ::before
+    text-align: center;
+    color: white;
+    padding: 2rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 
-  span{
-    padding: 30px;
-
-
-    a{
-      text-decoration: none;
-      color: #fff;
-    }
+  h1, p, button {
+    margin: 10px 0;
   }
 }
 
 
-img{
-  width: 100%;
-}
-
-
-
-.servicos-container {
+.description-banner{
+  position: absolute;
+  color: #fff;
+  z-index: 1000;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-  font-family: 'Segoe UI', sans-serif;
+  top: 30%;
+  left: 10%;
+  color: white;
+  font-family: 'monospace';
+  font-size: 1.5rem;
 
-  .servico-box {
-    background-color: #f4f6fa;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-
-    h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #001e74;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #333;
-      margin-bottom: 16px;
-
-      strong {
-        color: #001e74;
-      }
-
-      em {
-        display: block;
-        margin-top: 20px;
-        font-style: italic;
-        color: #555;
-      }
-    }
-
-    &.destaque {
-      background-color: #e8f0ff;
-    }
+  h1{
+    margin: 0px;
+    font-size: 70px;
   }
 
-  .servico-lista {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
+  .cursor {
+    display: inline-block;
+    width: 1ch;
+    animation: blink 0.7s step-end infinite;
+  }
+  &__animation{
+    color: #004aad;
+  }
+  &__button-wpp{
+    background-color: #c3f85f;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
 
-    li {
-      margin-bottom: 18px;
-      font-size: 15.5px;
-      line-height: 1.6;
+     &:active {
+    transform: scale(0.98); // Feedback sutil ao clicar
+  }
+
+    &:hover{
+      background-color: #a1f601;
     }
+  }
+  &__button-analise {
+  // Transparência pura + efeito glass
+  background: rgba(255, 255, 255, 0.1); // Quase transparente
+  backdrop-filter: blur(12px); // Desfoque do fundo
+  -webkit-backdrop-filter: blur(12px);
+
+  // Estilo minimalista
+  color: white; // Texto branco para contraste
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3); // Borda sutil
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  outline: none;
+
+  // Efeitos de interação
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2); // Leve brilho ao passar o mouse
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:active {
+    transform: scale(0.98); // Feedback sutil ao clicar
   }
 }
+  &__content-buttons{
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.servico-image{
+  img{
+    width: 463px;
+  }
+}
+
+/* Estilos Base */
+.servicos-container {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #333;
+}
+
+.servico-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+.servico-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.servico-header h2 {
+  font-size: 2.5rem;
+  color: #212529;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background: #004aad;
+  margin: 0 auto;
+}
+
+/* Grid Principal */
+.servico-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Texto e Cards */
+.servico-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  background: linear-gradient(120deg, #004aad 0%, #2170db 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+.servico-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+
+/* CTA */
+.servico-cta {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emphasis {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #212529;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #004aad 0%, #2170db 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,74,173,0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,74,173,0.4);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .servico-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-placeholder {
+    height: 250px;
+    order: -1;
+  }
+}
+
+
+
+
+
+
+
+/* Estilos Base */
+.servico-destaque {
+  padding: 4rem 2rem;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.destaque-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Elementos Decorativos */
+.servico-destaque::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0, 74, 173, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(33, 112, 219, 0.03) 0%, transparent 40%);
+}
+
+/* Introdução */
+.destaque-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.destaque-text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.brand-highlight {
+  font-weight: 700;
+  color: #004aad;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #004aad, #2170db);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+/* Grid de Serviços */
+.destaque-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.destaque-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.servico-item {
+  display: flex;
+  gap: 1.2rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #004aad;
+}
+
+.servico-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  background: #fff;
+}
+
+.servico-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.servico-item h3 {
+  color: #212529;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.servico-item p {
+  color: #495057;
+  line-height: 1.5;
+}
+
+/* CTA */
+.destaque-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.destaque-message {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.destaque-button {
+  background: linear-gradient(135deg, #004aad 0%, #2170db 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 74, 173, 0.3);
+}
+
+.destaque-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 74, 173, 0.4);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .destaque-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .servico-item {
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-bottom: 4px solid #004aad;
+  }
+}
+
+
+

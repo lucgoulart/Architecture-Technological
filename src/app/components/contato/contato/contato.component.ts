@@ -8,21 +8,10 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ContatoComponent implements OnInit {
 
-  contatoForm = this.fb.group({
-  nome: ['', Validators.required],
-  email: ['', [Validators.required, Validators.email]],
-  telefone: [''],
-  mensagem: ['', Validators.required]
-});
 
 constructor(private fb: FormBuilder) {}
 
-enviarMensagem() {
-  if (this.contatoForm.valid) {
-    console.log(this.contatoForm.value);
-    // Aqui você pode chamar um serviço de email, Firebase, ou API
-  }
-}
+
 
 ngOnInit(): void {
 
