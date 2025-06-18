@@ -2,11 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Technology Architecture</title>
+  <title>Architecture Technology</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+ <link id="favicon" rel="icon" type="image/png" href="assets/tec-logo.png">
 </head>
+
+
+<script>
+  const icons = [
+    'assets/tec-logo.png',
+    'assets/logo-technology-architecture.png'
+  ];
+  let index = 0;
+
+  setInterval(() => {
+    const favicon = document.getElementById('favicon');
+    if (favicon) {
+      favicon.href = icons[index];
+      index = (index + 1) % icons.length;
+    }
+  }, 800); // troca a cada 800ms
+</script>
+
 <body>
   <app-root></app-root>
 </body>
