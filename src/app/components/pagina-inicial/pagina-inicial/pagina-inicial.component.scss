@@ -64,6 +64,7 @@
     padding: 10px;
     cursor: pointer;
     border: none;
+    border-radius: 6px;
 
      &:active {
     transform: scale(0.98); // Feedback sutil ao clicar
@@ -504,8 +505,8 @@
         background-color: #0052cc;
         color: white;
         font-size: 2.5rem;
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         display: flex;
         justify-content: center;

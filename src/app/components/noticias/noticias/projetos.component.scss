@@ -1,11 +1,16 @@
+
+.div-pai{
+  display: flex;
+  justify-content: center;
+}
 .projetos-container {
   max-width: 900px;
-  margin: 50px auto;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10rem;
 }
 
 .texto-topo h1 {
@@ -59,7 +64,7 @@
 }
 
 .projeto {
-  width: 320px;
+  // width: 320px;
   padding: 20px;
   background: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -76,6 +81,12 @@
 
 .projeto h3 {
   margin: 0 0 10px;
+}
+
+.projeto h4{
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 100;
 }
 
 .projeto p {

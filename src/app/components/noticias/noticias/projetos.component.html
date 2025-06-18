@@ -1,25 +1,26 @@
-<section class="projetos-container">
-  <div class="texto-topo">
-    <h1>Projetos que entregam resultados</h1>
-    <p>Transformamos ideias em sites modernos, rápidos e responsivos. Veja nossos projetos abaixo.</p>
-    <button (click)="goToContato()" class="cta-button">Quero um site assim</button>
-  </div>
 
-  <div class="carrossel" (mouseenter)="stopAutoSlide()" (mouseleave)="startAutoSlide()">
-    <button class="seta" (click)="prev()">&#10094;</button>
-
-    <div class="projeto" *ngIf="projetos[currentIndex]">
-      <img [src]="projetos[currentIndex].imagem" [alt]="projetos[currentIndex].nome" />
-      <h3>{{ projetos[currentIndex].nome }}</h3>
-      <p>Status:
-        <span [ngClass]="projetos[currentIndex].status">{{ projetos[currentIndex].status }}</span>
-      </p>
-      <a *ngIf="projetos[currentIndex].status === 'finalizado'"
-         [href]="projetos[currentIndex].link" target="_blank" class="ver-link">
-        Ver Projeto
-      </a>
+<div class="div-pai">
+  <section class="projetos-container">
+    <div class="texto-topo">
+      <h1>Projetos que entregam resultados</h1>
+      <p>Transformamos ideias em sites modernos, rápidos e responsivos. Veja nossos projetos abaixo.</p>
+      <button (click)="goToContato()" class="cta-button">Quero um site assim</button>
     </div>
 
-    <button class="seta" (click)="next()">&#10095;</button>
-  </div>
-</section>
+    <div class="carrossel" (mouseenter)="stopAutoSlide()" (mouseleave)="startAutoSlide()">
+      <button class="seta" (click)="prev()">&#10094;</button>
+      <div class="projeto" *ngIf="projetos[currentIndex]">
+        <img [src]="projetos[currentIndex].imagem" [alt]="projetos[currentIndex].nome" />
+        <h3>{{ projetos[currentIndex].nome }}</h3>
+        <h4>{{ projetos[currentIndex].sobre }}</h4>
+        <p>Status: <span [ngClass]="projetos[currentIndex].status">{{ projetos[currentIndex].status }}</span></p>
+        <a *ngIf="projetos[currentIndex].status === 'finalizado'"
+           [href]="projetos[currentIndex].link" target="_blank" class="ver-link">
+          Ver Projeto
+        </a>
+      </div>
+      <button class="seta" (click)="next()">&#10095;</button>
+    </div>
+  </section>
+
+</div>
