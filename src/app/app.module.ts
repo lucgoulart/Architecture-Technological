@@ -7,7 +7,7 @@ import { FooterComponent } from './components/footer/footer/footer.component';
 import { HeaderComponent } from './components/header/header/header.component';
 import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inicial/pagina-inicial.component';
 import { QuemSomosComponent } from './components/quem-somos/quem-somos/quem-somos.component';
-import { NoticiasComponent } from './components/noticias/noticias/noticias.component';
+import { ProjetosComponent } from './components/noticias/noticias/projetos.component';
 import { ProdutosComponent } from './components/produtos/produtos/produtos.component';
 import { ParceirosComponent } from './components/parceiros/parceiros/parceiros.component';
 import { ContatoComponent } from './components/contato/contato/contato.component';
@@ -20,7 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     PaginaInicialComponent,
     QuemSomosComponent,
-    NoticiasComponent,
+    ProjetosComponent,
     ProdutosComponent,
     ParceirosComponent,
     ContatoComponent,
