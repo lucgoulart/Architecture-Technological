@@ -1,0 +1,120 @@
+.projetos-container {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-topo h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-top: 15rem;
+}
+
+.texto-topo p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.carrossel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.seta {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.seta:hover {
+  color: #0056b3;
+}
+
+.projeto {
+  width: 320px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.projeto img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.projeto h3 {
+  margin: 0 0 10px;
+}
+
+.projeto p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.ver-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 15px;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.ver-link:hover {
+  background: #1e7e34;
+}
+
+/* Status color */
+.finalizado {
+  color: green;
+}
+
+.andamento {
+  color: orange;
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
