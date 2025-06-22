@@ -37,7 +37,7 @@
 .description-banner{
   position: absolute;
   color: #fff;
-  z-index: 1000;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   top: 30%;
@@ -126,6 +126,9 @@
 
 
 .servico-image{
+  display: grid;
+  justify-content: center;
+
   img{
     width: 463px;
   }
@@ -586,3 +589,68 @@
     }
   }
 }
+
+// MOBILE
+
+@media (max-width: 1143px) {
+
+  .description-banner{
+  h1{
+    font-size: 60px !important;
+  }
+}
+}
+
+
+@media (max-width: 1004px) {
+
+  .description-banner{
+  h1{
+    font-size: 50px !important;
+  }
+}
+}
+
+@media (max-width: 800px) {
+
+  .description-banner{
+  h1{
+    font-size: 40px !important;
+  }
+}
+}
+
+@media (max-width: 600px) {
+
+  .description-banner{
+  h1{
+    font-size: 35px !important;
+  }
+}
+}
+
+@media (max-width: 533px) {
+
+ .servico-image{
+
+  img{
+    width: 327px;
+  }
+}
+}
+
+@media (max-width: 360px) {
+
+ .servico-image{
+  
+  img{
+    width: 290px !important;
+  }
+ }
+}
+
+
+
+
+
+

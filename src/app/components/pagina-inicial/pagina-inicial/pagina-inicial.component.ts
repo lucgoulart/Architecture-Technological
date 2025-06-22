@@ -55,7 +55,7 @@ export class PaginaInicialComponent implements OnInit {
 
  phrases = [
     'UM SITE PROFISSIONAL',
-    'UM E-COMMERCE PODEROSO',
+    'UM E-COMMERCE',
     'TRÁFEGO QUALIFICADO',
     'CONVERSÕES EXPLOSIVAS',
     'UM FUNIL DE VENDAS',
