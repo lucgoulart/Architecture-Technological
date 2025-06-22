@@ -1,10 +1,64 @@
 
 
+<section class="parceiros">
+  <div class="parceiros__intro">
+    <h2>Parceiros</h2>
+
+    <p>
+  Na <strong>Architecture Technological</strong>, acreditamos que os melhores resultados são conquistados através de grandes parcerias.
+  Trabalhamos lado a lado com empresas inovadoras, confiáveis e especialistas em suas áreas para entregar soluções completas, tecnológicas e de alto desempenho.
+</p>
+
+
+
+
+</div>
+<swiper-container
+class="parceiros-swiper"
+slides-per-view="4"
+space-between="24"
+loop="true"
+autoplay="true"
+autoplay-delay="2500"
+navigation="true"
+#swiperEl
+>
+<swiper-slide *ngFor="let parceiro of parceiros">
+<a [href]="parceiro.link" target="_blank" rel="noopener noreferrer">
+<div class="logo-card" [style.backgroundColor]="parceiro.bgColor">
+<img [src]="parceiro.logo" [alt]="parceiro.nome" class="logo" />
+<span>{{ parceiro.nome }}</span>
+</div>
+</a>
+</swiper-slide>
+
+</swiper-container>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 LISTA DE PARCEIROS EM MENTE
 
-<p>ESPETOKAS , MEDIA LABZ, DGA LOGISTICA, TRANSCARIOCA LOG, MENGARELLI TECNOLOGIA, IGOR BARBEIRO,GRUPO DEMELO, DRA TAYNA SUNGAILA, STI INFORMATICA, CECAPETS, VARAL DAS GRIFES, OREIA CORTES, DESEABLE IMPORTS, AUTOSAMPA  </p>
+<p>ESPETOKAS , MEDIA LABZ, DGA LOGISTICA, TRANSCARIOCA LOG, DUDU, LUCIANO FEFE,GRUPO DEMELO, OREIA CORTES, AUTOSAMPA  </p>
 
 <!-- <section class="parceiros-intro">
   <h1>Nossos Parceiros</h1>

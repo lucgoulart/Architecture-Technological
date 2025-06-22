@@ -1,0 +1,38 @@
+.parceiros {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #ffffff, #f2f7ff);
+  font-family: 'Segoe UI', sans-serif;
+
+  &__intro {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1400px;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      margin-top: 10rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+
+      strong {
+        color: #000;
+      }
+
+      em {
+        font-style: italic;
+        color: #1f61ff;
+      }
+    }
+  }
+}
+

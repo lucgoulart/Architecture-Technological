@@ -3,14 +3,120 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-parceiros',
   templateUrl: './parceiros.component.html',
-  styleUrls: ['./parceiros.component.scss'],
+  styleUrls: ['./parceiros.component.scss']
 })
 export class ParceirosComponent {
-  parceiros = [
-    { nome: 'Microsoft', logo: 'assets/parceiros/microsoft.png' },
-    { nome: 'Google', logo: 'assets/parceiros/google.png' },
-    { nome: 'Adobe', logo: 'assets/parceiros/adobe.png' },
-    { nome: 'HubSpot', logo: 'assets/parceiros/hubspot.png' },
-    // Adicione mais parceiros conforme necessário
-  ];
+parceiros = [
+  {
+    nome: 'TechSoft',
+    logo: 'assets/logo-technology-architecture.png',
+    bgColor: '#e1f5fe',
+    link: 'https://www.techsoft.com'
+  },
+  {
+    nome: 'BuildCode',
+    logo: 'assets/parceiros/buildcode-logo.png',
+    bgColor: '#f1f8e9',
+    link: 'https://www.buildcode.com'
+  },
+  {
+    nome: 'InovaWeb',
+    logo: 'assets/parceiros/inovaweb-logo.png',
+    bgColor: '#fce4ec',
+    link: 'https://www.inovaweb.com.br'
+  },
+  {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+
+    {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+
+    {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+
+    {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+    {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+
+  {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+
+  {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+
+  {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+
+  {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+
+  {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+
+  {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+
+  {
+    nome: 'NextCloud',
+    logo: 'assets/parceiros/nextcloud-logo.png',
+    bgColor: '#ede7f6',
+    link: 'https://www.nextcloud.com'
+  },
+  // continue...
+];
+
+
+
+  /** JSON usado nos breakpoints (1→4 cards) */
+  readonly breakpoints = {
+    0:   { slidesPerView: 1 },
+    600: { slidesPerView: 2 },
+    900: { slidesPerView: 3 },
+    1200:{ slidesPerView: 4 }
+  };
 }

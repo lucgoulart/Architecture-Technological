@@ -31,7 +31,7 @@
           <div class="info-content">
             <h3>E-mail</h3>
             <p>Para propostas e orçamentos</p>
-            <a href="mailto:contato@technologyarchitecture.com" class="info-link">contato@technologyarchitecture.com</a>
+            <a href="mailto:contato@technologyarchitecture.com" class="info-link">contato&#64;technologyarchitecture.com</a>
           </div>
         </div>
 
@@ -56,22 +56,40 @@
       <!-- Coluna do Formulário -->
       <div class="contato-form">
         <h3>Envie sua mensagem</h3>
-        <form>
-          <div class="form-group">
-            <input type="text" placeholder="Seu nome" required>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Seu e-mail" required>
-          </div>
-          <div class="form-group">
-            <input type="tel" placeholder="Seu telefone (opcional)">
-          </div>
-          <div class="form-group">
-            <textarea placeholder="Como podemos ajudar?" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Enviar mensagem</button>
-        </form>
+   <form (ngSubmit)="enviarFormulario()" #formContato="ngForm">
+
+ <div class="form-group">
+<input type="text" name="nome" [(ngModel)]="formData.nome" placeholder="Seu nome" required />
+
+</div>
+
+ <div class="form-group">
+  <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Seu e-mail" required />
+ </div>
+
+  <div class="form-group">
+  <input type="tel" name="telefone" [(ngModel)]="formData.telefone" placeholder="Seu telefone (opcional)" />
+  </div>
+
+   <div class="form-group">
+  <textarea name="mensagem" [(ngModel)]="formData.mensagem" placeholder="Como podemos ajudar?" rows="5" required></textarea>
+   </div>
+  <button type="submit" class="submit-btn" [disabled]="formContato.invalid">Enviar mensagem</button>
+</form>
+
+
       </div>
     </div>
   </div>
 </section>
+
+
+
+<div *ngIf="mostrarModal" class="modal-overlay" (click)="fecharModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2 *ngIf="tipoModal === 'sucesso'" style="color: green;">Sucesso!</h2>
+    <h2 *ngIf="tipoModal === 'erro'" style="color: red;">Erro!</h2>
+    <p>{{ mensagemModal }}</p>
+    <button (click)="fecharModal()">Fechar</button>
+  </div>
+</div>

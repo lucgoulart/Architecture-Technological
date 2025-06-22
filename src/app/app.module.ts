@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,8 +11,9 @@ import { ProjetosComponent } from './components/noticias/noticias/projetos.compo
 import { ProdutosComponent } from './components/produtos/produtos/produtos.component';
 import { ParceirosComponent } from './components/parceiros/parceiros/parceiros.component';
 import { ContatoComponent } from './components/contato/contato/contato.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,15 +25,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProjetosComponent,
     ProdutosComponent,
     ParceirosComponent,
-    ContatoComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
