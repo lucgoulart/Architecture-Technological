@@ -1,7 +1,8 @@
+
 <div class="header">
 
   <div class="header__logo">
-    <a href="/"><img src="assets/tec-logo.png" alt=""></a>
+    <a href="/"><img class="logo-header" src="assets/tec-logo.png" alt=""></a>
   </div>
 
   <div class="header__options">
@@ -17,6 +18,28 @@
     <button><a target="_blank" href="https://wa.me/5511993818546?text=Ol%C3%A1%2C%20quero%20receber%20an%C3%A1lise%20gratuita">Receber análise gratuita</a>
 </button>
   </div>
+
+    <!-- MOBILE  -->
+<div class="menu-icon" (click)="toggleMenu()">
+  &#9776;
+</div>
+<div id="overlay" (click)="toggleMenu()"></div>
+<nav id="side-menu">
+    <button class="close-btn" (click)="toggleMenu()">✕</button>
+    <ul>
+      <p class="chique-hover"><a href="/pagina-inicial">A empresa</a></p>
+      <p class="chique-hover"><a href="/produtos">Produtos</a></p>
+      <p class="chique-hover"><a href="/projetos">Projetos</a></p>
+      <p class="chique-hover"><a href="/contato">Contato</a></p>
+      <p class="chique-hover"><a href="/quem-somos">Quem somos</a></p>
+      <p class="chique-hover"><a href="/parceiros">Parceiros</a></p>
+    </ul>
+  <div class="link-analise-mobile">
+    <a target="_blank" href="https://wa.me/5511993818546?text=Ol%C3%A1%2C%20quero%20receber%20an%C3%A1lise%20gratuita">Receber análise gratuita</a>
+  </div>
+  <img src="assets/logo-technology-architecture.png" alt="">
+</nav>
+  <!-- ----------------------------- -->
 
 </div>
 

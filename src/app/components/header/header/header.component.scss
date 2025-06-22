@@ -76,3 +76,163 @@ img {
   }
 }
 }
+
+// MOBILE
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;        /* desativa clique enquanto escondido */
+  transition: opacity 0.35s ease;
+  z-index: 1000;
+}
+
+/* Menu lateral */
+#side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  background: #403f3f;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.25);
+  transform: translateX(-100%); /* fora da viewport */
+  transition: transform 0.35s cubic-bezier(.4, .0, .2, 1);
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem 1.5rem;
+}
+
+/* Botão fechar */
+.close-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  color: #004aad;
+}
+
+/* Itens do menu */
+#side-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#side-menu li {
+  margin-bottom: 1rem;
+}
+
+#side-menu a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  transition: color 0.2s;
+}
+
+#side-menu a:hover {
+  color: #0077ff;
+
+
+}
+
+:host.menu-open #side-menu {
+  transform: translateX(0);
+}
+
+:host.menu-open #overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== Media Query: só mostra ícone e ativa menu até 825 px ===== */
+@media (max-width: 825px) {
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* ===== Classe “active” controla abertura ===== */
+.menu-open #overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-open #side-menu {
+  transform: translateX(0);
+}
+
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+  display: none;
+}
+
+@media (max-width: 825px) {
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+
+
+@media (max-width: 1224px) {
+  .logo-header{
+    width: 195px;
+    height: 70.5px;
+  }
+  }
+
+  @media (max-width: 1041px) {
+    a{
+      font-size: 12px !important;
+    }
+  }
+
+ @media (max-width: 850px) {
+    button{
+      padding: 10px !important;
+    }
+  }
+
+
+   @media (max-width: 825px) {
+    .header{
+      &__options{
+        display: none !important;
+      }
+      button{
+        display: none;
+      }
+    }
+    #side-menu a {
+      text-decoration: none;
+      font-size: 18px !important;
+      color: #fff;
+      transition: color 0.2s;
+}
+    .chique-hover{
+      margin-bottom: 50px;
+}
+  }
+  .link-analise-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a{
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #004aad;
+      cursor: pointer;
+      border: none;
+    }
+  }
