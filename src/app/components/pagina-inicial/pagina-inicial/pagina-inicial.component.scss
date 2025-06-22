@@ -73,6 +73,11 @@
     &:hover{
       background-color: #a1f601;
     }
+
+    a{
+      text-decoration: none;
+      color: #000;
+    }
   }
   &__button-analise {
   // Transparência pura + efeito glass
@@ -100,10 +105,16 @@
   &:active {
     transform: scale(0.98); // Feedback sutil ao clicar
   }
+
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
 }
   &__content-buttons{
     display: flex;
     gap: 10px;
+
   }
 }
 
@@ -231,6 +242,11 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0,74,173,0.3);
+
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .cta-button:hover {
@@ -376,6 +392,11 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 74, 173, 0.3);
+
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .destaque-button:hover {

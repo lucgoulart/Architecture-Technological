@@ -105,6 +105,10 @@
   font-size: 0.9rem;
 }
 
+.info-content a {
+  text-decoration: none;
+}
+
 .info-link {
   color: #004aad;
   text-decoration: none;
@@ -210,6 +214,12 @@ textarea {
   box-shadow: 0 5px 15px rgba(0, 74, 173, 0.3);
 }
 
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
   .contato-grid {
@@ -238,4 +248,9 @@ textarea {
   border-radius: 8px;
   max-width: 320px;
   text-align: center;
+}
+
+.p-modal{
+  color: #495057;
+  font-size: 1.1rem;
 }

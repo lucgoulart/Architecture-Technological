@@ -1,39 +1,205 @@
-
-
 <section class="parceiros">
   <div class="parceiros__intro">
     <h2>Parceiros</h2>
-
     <p>
-  Na <strong>Architecture Technological</strong>, acreditamos que os melhores resultados são conquistados através de grandes parcerias.
-  Trabalhamos lado a lado com empresas inovadoras, confiáveis e especialistas em suas áreas para entregar soluções completas, tecnológicas e de alto desempenho.
-</p>
+      Na <strong>Architecture Technological</strong>, acreditamos que os melhores resultados são conquistados através de grandes parcerias.
+      Trabalhamos lado a lado com empresas inovadoras, confiáveis e especialistas em suas áreas para entregar soluções completas, tecnológicas e de alto desempenho.
+    </p>
+  </div>
 
-
-
-
-</div>
-<swiper-container
-class="parceiros-swiper"
-slides-per-view="4"
-space-between="24"
-loop="true"
-autoplay="true"
-autoplay-delay="2500"
-navigation="true"
-#swiperEl
->
-<swiper-slide *ngFor="let parceiro of parceiros">
-<a [href]="parceiro.link" target="_blank" rel="noopener noreferrer">
-<div class="logo-card" [style.backgroundColor]="parceiro.bgColor">
-<img [src]="parceiro.logo" [alt]="parceiro.nome" class="logo" />
-<span>{{ parceiro.nome }}</span>
-</div>
-</a>
-</swiper-slide>
-
-</swiper-container>
+  <swiper-container
+    class="parceiros-swiper"
+    slides-per-view="4"
+    space-between="24"
+    loop="true"
+    autoplay="true"
+    autoplay-delay="2500"
+    navigation="true"
+    #swiperEl
+  >
+    <swiper-slide *ngFor="let parceiro of parceiros">
+      <a [href]="parceiro.link" target="_blank" rel="noopener noreferrer">
+        <div class="logo-card" [style.backgroundColor]="parceiro.bgColor">
+          <img [src]="parceiro.logo" [alt]="parceiro.nome" class="logo" />
+          <span>{{ parceiro.nome }}</span>
+        </div>
+      </a>
+    </swiper-slide>
+  </swiper-container>
 </section>
+
+<div
+  class="parceiros__call-to-action"
+  style="
+    margin-top: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  "
+>
+  <h3 style="font-size: 2rem; margin-bottom: 24px; font-weight: 700;">
+    Vantagens de ser parceiro da Architecture Technological
+  </h3>
+
+  <div
+    style="
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    "
+  >
+    <div
+      style="
+        flex: 1 1 280px;
+        background: #f9f9f9;
+        padding: 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+        text-align: left;
+      "
+    >
+      <h4 style="font-size: 1.25rem; margin-bottom: 8px; color: #007bff;">
+        🔍 Visibilidade e Reconhecimento
+      </h4>
+      <p style="font-size: 1rem; line-height: 1.5;">
+        Destaque no nosso site e redes sociais para ampliar sua presença no mercado digital.
+      </p>
+    </div>
+
+    <div
+      style="
+        flex: 1 1 280px;
+        background: #f9f9f9;
+        padding: 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+        text-align: left;
+      "
+    >
+      <h4 style="font-size: 1.25rem; margin-bottom: 8px; color: #007bff;">
+        🤝 Networking Estratégico
+      </h4>
+      <p style="font-size: 1rem; line-height: 1.5;">
+        Faça parte de uma rede inovadora que abre portas para novas oportunidades.
+      </p>
+    </div>
+
+    <div
+      style="
+        flex: 1 1 280px;
+        background: #f9f9f9;
+        padding: 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+        text-align: left;
+      "
+    >
+      <h4 style="font-size: 1.25rem; margin-bottom: 8px; color: #007bff;">
+        🚀 Acesso a Projetos Inovadores
+      </h4>
+      <p style="font-size: 1rem; line-height: 1.5;">
+        Colabore em soluções tecnológicas de ponta.
+      </p>
+    </div>
+
+    <div
+      style="
+        flex: 1 1 280px;
+        background: #f9f9f9;
+        padding: 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+        text-align: left;
+      "
+    >
+      <h4 style="font-size: 1.25rem; margin-bottom: 8px; color: #007bff;">
+        📢 Marketing Colaborativo
+      </h4>
+      <p style="font-size: 1rem; line-height: 1.5;">
+        Campanhas e eventos conjuntos para aumentar o alcance da sua marca.
+      </p>
+    </div>
+
+    <div
+      style="
+        flex: 1 1 280px;
+        background: #f9f9f9;
+        padding: 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+        text-align: left;
+      "
+    >
+      <h4 style="font-size: 1.25rem; margin-bottom: 8px; color: #007bff;">
+        🛠 Suporte e Consultoria Técnica
+      </h4>
+      <p style="font-size: 1rem; line-height: 1.5;">
+        Troca de conhecimento para impulsionar seu negócio.
+      </p>
+    </div>
+
+    <div
+      style="
+        flex: 1 1 280px;
+        background: #f9f9f9;
+        padding: 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+        text-align: left;
+      "
+    >
+      <h4 style="font-size: 1.25rem; margin-bottom: 8px; color: #007bff;">
+        🎉 Presença em Eventos e Lançamentos
+      </h4>
+      <p style="font-size: 1rem; line-height: 1.5;">
+        Convites exclusivos para eventos de tecnologia e inovação.
+      </p>
+    </div>
+
+    <div
+      style="
+        flex: 1 1 280px;
+        background: #f9f9f9;
+        padding: 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+        text-align: left;
+      "
+    >
+      <h4 style="font-size: 1.25rem; margin-bottom: 8px; color: #007bff;">
+        ✅ Demonstração de Credibilidade
+      </h4>
+      <p style="font-size: 1rem; line-height: 1.5;">
+        Associe sua marca a uma empresa que valoriza qualidade e ética.
+      </p>
+    </div>
+  </div>
+
+  <a
+    target="_blank"
+    href="https://wa.me/5511993818546?text=Ol%C3%A1%20quero%20ser%20parceiro%20da%20architecture%20technological%2C%20como%20funciona%3F"
+    style="
+      display: inline-block;
+      margin-top: 40px;
+      background-color: #007bff;
+      color: white;
+      padding: 16px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgb(0 123 255 / 0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    "
+    onmouseover="this.style.backgroundColor='#0056b3'; this.style.boxShadow='0 6px 18px rgba(0,86,179,0.8)';"
+    onmouseout="this.style.backgroundColor='#007bff'; this.style.boxShadow='0 4px 12px rgba(0,123,255,0.6)';"
+  >
+    Quero ser parceiro
+  </a>
+</div>
 
 
 
