@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./parceiros.component.scss']
 })
 export class ParceirosComponent {
+
+showModal = false;
 parceiros = [
   {
     nome: 'TechSoft',
@@ -110,7 +112,13 @@ parceiros = [
   // continue...
 ];
 
+ ngOnInit(): void {
+    this.showModal = true;
+  }
 
+  redirectToContato(): void {
+    window.location.href = '/contato'; // ou a rota real do seu botão
+  }
 
   /** JSON usado nos breakpoints (1→4 cards) */
   readonly breakpoints = {
@@ -120,3 +128,7 @@ parceiros = [
     1200:{ slidesPerView: 4 }
   };
 }
+
+
+
+

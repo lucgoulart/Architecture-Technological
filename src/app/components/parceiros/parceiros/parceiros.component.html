@@ -1,13 +1,35 @@
 <section class="parceiros">
   <div class="parceiros__intro">
-    <h2>Parceiros</h2>
+    <h1>Parceiros</h1>
     <p>
       Na <strong>Architecture Technological</strong>, acreditamos que os melhores resultados são conquistados através de grandes parcerias.
       Trabalhamos lado a lado com empresas inovadoras, confiáveis e especialistas em suas áreas para entregar soluções completas, tecnológicas e de alto desempenho.
     </p>
+
+  <a
+    target="_blank"
+    href="https://wa.me/5511993818546?text=Ol%C3%A1%20quero%20ser%20parceiro%20da%20architecture%20technological%2C%20como%20funciona%3F"
+    style="
+      display: inline-block;
+      margin-top: 40px;
+      background-color: #007bff;
+      color: white;
+      padding: 16px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgb(0 123 255 / 0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 50px;
+    "
+    onmouseover="this.style.backgroundColor='#0056b3'; this.style.boxShadow='0 6px 18px rgba(0,86,179,0.8)';"
+    onmouseout="this.style.backgroundColor='#007bff'; this.style.boxShadow='0 4px 12px rgba(0,123,255,0.6)';"
+  >
+    Quero ser parceiro
+  </a>
   </div>
 
-  <swiper-container
+  <!-- <swiper-container
     class="parceiros-swiper"
     slides-per-view="4"
     space-between="24"
@@ -25,7 +47,7 @@
         </div>
       </a>
     </swiper-slide>
-  </swiper-container>
+  </swiper-container> -->
 </section>
 
 <div
@@ -193,12 +215,33 @@
       font-size: 1rem;
       box-shadow: 0 4px 12px rgb(0 123 255 / 0.6);
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 50px;
     "
     onmouseover="this.style.backgroundColor='#0056b3'; this.style.boxShadow='0 6px 18px rgba(0,86,179,0.8)';"
     onmouseout="this.style.backgroundColor='#007bff'; this.style.boxShadow='0 4px 12px rgba(0,123,255,0.6)';"
   >
     Quero ser parceiro
   </a>
+</div>
+
+
+
+
+
+
+<div class="modal-backdrop" *ngIf="showModal">
+  <div class="modal-container">
+    <h2>Estamos construindo parcerias de valor</h2>
+    <p>
+      A Architecture Technological está em fase de expansão e seleção de parceiros estratégicos.
+      Em breve, esta seção estará repleta de empresas que compartilham nossos valores de inovação,
+      qualidade e compromisso com resultados.
+    </p>
+    <p>
+      Se você deseja fazer parte desse ecossistema, entre em contato conosco.
+    </p>
+    <button class="contact-button" (click)="redirectToContato()">Entrar em contato</button>
+  </div>
 </div>
 
 
@@ -215,39 +258,8 @@
 
 
 
-
-
-
-
-
-
-
+<!--
 LISTA DE PARCEIROS EM MENTE
 
-<p>ESPETOKAS , MEDIA LABZ, DGA LOGISTICA, TRANSCARIOCA LOG, DUDU, LUCIANO FEFE,GRUPO DEMELO, OREIA CORTES, AUTOSAMPA  </p>
+<p>ESPETOKAS , MEDIA LABZ, DGA LOGISTICA, TRANSCARIOCA LOG, DUDU, LUCIANO FEFE,GRUPO DEMELO, OREIA CORTES, AUTOSAMPA  </p> -->
 
-<!-- <section class="parceiros-intro">
-  <h1>Nossos Parceiros</h1>
-  <p>
-    A <strong>Technology Architecture</strong> valoriza as parcerias que fortalecem nossos serviços e ampliam as soluções para nossos clientes.
-    Trabalhamos com empresas líderes em tecnologia, design e marketing digital para entregar resultados excepcionais.
-  </p>
-</section>
-
-
-
-
-<section class="parceiros-intro">
-  <h1>Nossos Parceiros</h1>
-  <p>
-    A <strong>Technology Architecture</strong> valoriza as parcerias que fortalecem nossos serviços e ampliam as soluções para nossos clientes.
-    Trabalhamos com empresas líderes em tecnologia, design e marketing digital para entregar resultados excepcionais.
-  </p>
-</section>
-
-<section class="parceiros-grid">
-  <div class="parceiro-card" *ngFor="let parceiro of parceiros">
-    <img [src]="parceiro.logo" [alt]="parceiro.nome" />
-    <p>{{ parceiro.nome }}</p>
-  </div>
-</section> -->

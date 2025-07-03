@@ -129,3 +129,91 @@
     transform: translateY(0);
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .projetos-container {
+    padding: 0 10px;
+    margin-bottom: 5rem;
+  }
+
+  .texto-topo h1 {
+
+    margin-top: 9rem;
+  }
+
+  .texto-topo p {
+    font-size: 1rem;
+    padding: 0 5px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .carrossel {
+    flex-direction: column;
+  }
+
+  .projeto {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .projeto img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+  }
+
+  .projeto h3 {
+    font-size: 1.1rem;
+  }
+
+  .projeto h4 {
+    font-size: 0.95rem;
+  }
+
+  .projeto p {
+    font-size: 0.9rem;
+  }
+
+  .ver-link {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .seta {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .seta:first-of-type {
+    left: 5px;
+  }
+
+  .seta:last-of-type {
+    right: 5px;
+  }
+
+  @media (max-width: 1024px) {
+  .carrossel {
+    padding: 0 10px;
+  }
+
+  .projeto img {
+    max-height: 300px;
+    object-fit: cover; /* ou 'contain' se preferir ver tudo mesmo com bordas */
+  }
+
+  .projeto {
+    width: 100%;
+    padding: 20px;
+  }
+}
+}
