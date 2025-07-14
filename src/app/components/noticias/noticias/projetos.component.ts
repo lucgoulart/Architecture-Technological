@@ -35,7 +35,7 @@ export class ProjetosComponent implements OnInit {
       nome: 'Portfólio pessoal',
       imagem: 'assets/portfolio-pessoal.png',
       status: 'finalizado',
-      sobre: 'Projeto desenvolvido com foco na apresentação profissional de desenvolvedores e criativos. Construído com tecnologias modernas e hospedado gratuitamente no GitHub Pages, garantindo domínio personalizado e zero custo de hospedagem. A Architecture Technological oferece esse tipo de portfólio com total suporte técnico, sem cobrança de mensalidade ou servidor, aproveitando soluções confiáveis e escaláveis para presença digital eficiente.',
+      sobre: 'Projeto desenvolvido com foco na apresentação profissional de desenvolvedores e criativos. Construído com tecnologias modernas e hospedado gratuitamente no GitHub Pages, garantindo domínio personalizado e zero custo de hospedagem. A Architecture Technological oferece esse tipo de portfólio com total suporte técnico, sem cobrança de servidor, aproveitando soluções confiáveis e escaláveis para presença digital eficiente.',
       link: 'https://lucgoulart.github.io/personal-portfolio/index.html'
     },
 
