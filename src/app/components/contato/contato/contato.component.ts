@@ -21,21 +21,35 @@ export class ContatoComponent {
 
   constructor(private http: HttpClient) {}
 
+
 enviarFormulario() {
-  if (
-    this.formData.nome &&
-    this.formData.email &&
-    this.formData.mensagem &&
-    this.validarTelefone(this.formData.telefone)
-  ) {
-    this.mostrarModal = true;
-    this.tipoModal = 'sucesso';
-    this.mensagemModal = this.gerarMensagemSucesso();
-    // lógica de envio...
-  } else {
-    this.mostrarModal = true;
-    this.tipoModal = 'erro';
-    this.mensagemModal = 'Por favor, preencha corretamente todos os campos obrigatórios, inclusive o telefone no formato (XX) 9XXXX-XXXX ou deixe-o em branco.';
+  if (this.formData.nome && this.formData.email && this.formData.mensagem) {
+    const dados = {
+      nome: this.formData.nome,
+      email: this.formData.email,
+      telefone: this.formData.telefone,
+      mensagem: this.formData.mensagem
+    };
+
+    this.http.post('https://formsubmit.co/ajax/architecturetechnological@gmail.com', dados).subscribe({
+      next: () => {
+        this.mostrarModal = true;
+        this.tipoModal = 'sucesso';
+        this.mensagemModal = `${this.formData.nome}, sua mensagem foi enviada com sucesso! Em breve entraremos em contato pelo e-mail: ${this.formData.email} ou pelo WhatsApp: ${this.formData.telefone}.`;
+
+      },
+          error: () => {
+        this.mostrarModal = true;
+        this.tipoModal = 'erro';
+        this.mensagemModal = `
+          Ocorreu um erro ao enviar a mensagem. Tente novamente.<br>
+          Se o erro persistir, entre em contato pelo
+          <a href="https://wa.me/5511993818546" target="_blank" style="color: #25D366; text-decoration: underline;">
+            WhatsApp
+          </a>.
+        `;
+}
+    });
   }
 }
 
