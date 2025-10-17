@@ -5,25 +5,10 @@
   <title>Architecture Technological</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <link id="favicon" rel="icon" type="image/png" href="assets/tec-logo.png">
+ <link id="favicon" rel="icon" type="image/png" href="assets/logo_arch-black.svg">
 </head>
 
 
-<script>
-  const icons = [
-    'assets/tec-logo.png',
-    'assets/logo-technology-architecture.png'
-  ];
-  let index = 0;
-
-  setInterval(() => {
-    const favicon = document.getElementById('favicon');
-    if (favicon) {
-      favicon.href = icons[index];
-      index = (index + 1) % icons.length;
-    }
-  }, 800); // troca a cada 800ms
-</script>
 
 <body>
   <app-root></app-root>
